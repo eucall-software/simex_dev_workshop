@@ -6,6 +6,8 @@ set is_module_rm [module-info mode remove]
 
 #!/bin/sh
 
+module load intel/2018
+
 set home $::env(HOME)
 setenv ESTHER_ESTHER $home/Esther/ESTHER
 prepend-path PATH $home/Esther/ESTHER/ESTHER_exec_linux
