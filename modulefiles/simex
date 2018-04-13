@@ -1,0 +1,33 @@
+#%Module
+#
+# modulefile for simex_platform
+#
+
+# Help
+proc ModulesHelp { } {
+puts stderr "This modulefile defines library and executable paths"
+puts stderr "for the simex_platform python library and physics modules. Branch develop as installed on maxwell server."
+}
+
+set is_module_rm [module-info mode remove]
+
+# INTEL
+module load intel/2018
+prepend-path LD_LIBRARY_PATH /opt/intel/2018/compiler/lib/intel64
+prepend-path LD_LIBRARY_PATH /opt/intel/2018/mpirt/lib/intel64
+prepend-path LD_LIBRARY_PATH /opt/intel/2018/mkl/lib/intel64
+prepend-path PATH /opt/intel/2018/bin/intel64
+setenv MKLROOT /opt/intel/2018/mkl
+
+# MPI
+module load mpi/openmpi-x86_64
+
+# PYTHON3.4
+module load python3/3.4
+
+# SIMEX
+prepend-path PATH /data/netapp/s2e/simex/bin
+prepend-path LD_LIBRARY_PATH /data/netapp/s2e/simex/lib
+prepend-path PYTHONPATH /data/netapp/s2e/simex/lib/python3.4
+prepend-path PYTHONPATH /data/netapp/s2e/simex/lib64/python3.4/site-packages
+prepend-path PYTHONPATH /data/netapp/s2e/simex/lib/python3.4/site-packages

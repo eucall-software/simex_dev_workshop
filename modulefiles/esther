@@ -1,0 +1,15 @@
+#%Module
+# esther modulefile
+#
+
+set is_module_rm [module-info mode remove]
+
+#!/bin/sh
+
+local home = getenv("HOME")
+#setenv ESTHER_ESTHER $HOME/Esther/ESTHER
+#prepend-path PATH $HOME/Esther/ESTHER/ESTHER_exec_linux
+#append-path PYTHONPATH $HOME/Esther/ESTHER/ESTHER_python/src
+#append-path PYTHONPATH $HOME/Esther/ESTHER/ESTHER_python/src/pydat
+#append-path PYTHONPATH $HOME/Esther/ESTHER/ESTHER_python/src/pyktho
+#append-path PYTHONPATH $HOME/Esther/ESTHER/ESTHER_python/src/utils
